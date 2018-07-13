@@ -4,7 +4,10 @@ open System
 open Suave.Html
 open Suave.Form
 open Form
-    
+
+
+
+let htmlMatch = Form.createHtmlView(Form.party)
 
 let index =
     html [] [
@@ -15,8 +18,11 @@ let index =
         body [] [
             div ["id", "header"] [
                 tag "h1" [] [
-                    a "/" [] [Text "Matchers"]
+                    a "/" [] [Text "Matcheeeers"]
                 ]
+            ]
+            div ["id", "game"] [
+                Text htmlMatch
             ]
 
             div ["id", "footer"] [
